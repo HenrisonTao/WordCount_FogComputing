@@ -17,9 +17,14 @@ cd WordCount_FogComputing
 ```
 vim dockerComposeEnv
 ```
-3. Build docker containers
+3. Build or pull docker image
+Option1 : build image
 ```
-docker build --no-cache --force-rm -f ./Dockerfile_Ubuntu -t hytao/fognode .
+docker build --no-cache --force-rm -f ./Dockerfile_Ubuntu -t hytao/fognode
+```
+Option2 : pull image
+```
+docker pull hytao/fognode
 ```
 4. Start all nodes 
 ```
