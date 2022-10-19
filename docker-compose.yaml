@@ -1,0 +1,59 @@
+version: "3.9"
+
+# Topology looks like this:
+services:
+###cloud node
+  CloudNode1:
+    container_name: CloudNode
+    image: ${BASE_IMAGE}
+    command: ${CLOUD_COMMAND}
+    networks:
+      static-network:
+        ipv4_address: ${CLOUD_NODE1_IP}
+
+###cloud node
+  FogNode1:
+    container_name: FogNode1
+    image: ${BASE_IMAGE}
+    command: ${FOG_COMMAND}  
+    networks:
+      static-network:
+        ipv4_address: ${FOG_NODE1_IP}
+
+  FogNode2:
+    container_name: FogNode2
+    image: ${BASE_IMAGE}
+    command: ${FOG_COMMAND} 
+    networks:
+      static-network:
+        ipv4_address: ${FOG_NODE2_IP}
+
+###client node
+  ClientNode1:
+    container_name: ClientNode1
+    image: ${BASE_IMAGE}
+    command: ${CLIENT_COMMAND}
+    networks:
+      static-network:
+        ipv4_address: ${CLIENT_NODE1_IP}
+  ClientNode2:
+    container_name: ClientNode2
+    image: ${BASE_IMAGE}
+    command: ${CLIENT_COMMAND}
+    networks:
+      static-network:
+        ipv4_address: ${CLIENT_NODE2_IP}
+  ClientNode3:
+    container_name: ClientNode3
+    image: ${BASE_IMAGE}
+    command: ${CLIENT_COMMAND}
+    networks:
+      static-network:
+        ipv4_address: ${CLIENT_NODE3_IP}
+
+
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
