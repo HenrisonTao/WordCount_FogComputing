@@ -178,7 +178,7 @@ class Fog_Word_Job:
             if sc.job_queue.qsize()>0:
                 job = sc.job_queue.get()
                 self.update_word_count(self.data_to_word_set(job.data))
-                self.check_send2cloud_conditions()
+            self.check_send2cloud_conditions()
 
     def send_to_cloud(self):
         send_data=""
