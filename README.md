@@ -1,4 +1,4 @@
-# WordCount_FogComputing with Docker (show the Hottest N words)
+# WordCount_FogComputing with Docker (show the Hottest-N words)
 The program was designed to demo the fog computing for word count. I was using Python3 and Docker to implement it.
 
 ### Prerequisites
@@ -34,7 +34,7 @@ Wait for enter the ClientNode1 bash then run the commands
 ```
 python3 main.py 2 172.20.11.1 5001
 ```
-6. Check the CloudNode logs and we can see the Hottest N words 
+6. Check the CloudNode logs and we can see the Hottest-N words 
 ```
 docker logs -f CloudNode 
 ```
