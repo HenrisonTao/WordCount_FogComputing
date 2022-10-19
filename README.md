@@ -1,9 +1,10 @@
 # WordCount_FogComputing with Docker (show the Hottest-N words)
 The program was designed to demo the fog computing for word count. I was using Python3 and Docker to implement it.
+![arch](https://user-images.githubusercontent.com/17466501/196716419-670d7343-4a67-411c-8bf5-8162a80b7e46.png)
+![screenshot](https://user-images.githubusercontent.com/17466501/196716526-341017d8-22e1-40f4-952e-1d7b715baba4.png)
 
 ### Prerequisites
 The program needs to install [Docker](https://docs.docker.com/get-docker/) and [Docker-Compose](https://docs.docker.com/compose/).
-
 
 ### Getting Started
 Follow the steps :
